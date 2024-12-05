@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: payment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payments_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  hikari:
+    connectionTimeout: 20000
+    maximumPoolSize: 5
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+      use_sql_comments: true
+    show-sql: false
+
+server:
+  tomcat:
+    max-swallow-size: -1
+  servlet:
+    context-path: /payment/api
+  port: 8081
