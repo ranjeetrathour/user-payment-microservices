@@ -13,8 +13,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "payment_service")
 public class Payment extends BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long paymentId;
 
     private Long userId;
